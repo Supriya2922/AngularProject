@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@400&family=Roboto:wght@100&display=swap');
+h1{
+    font-family: Poppins;
+margin-top: 10px;
+}
+.container{
+    margin:auto;
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 50px;
+    height: 80%;
+    margin-top: 35px;
+   
+}
+.name{
+    display: flex;
+    gap:5px;
+    margin-top: 10px;
+}
+.container-2{
+    display: flex;
+    justify-content: space-around;
+}
+.google-logo{
+    height: 48px;
+    width: 120px;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.alert{
+    color:red;
+    font-size: small;
+    
+}
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #0051ff;
+    font:bold 14px poppins;
+    margin-top: 10px;
+}
+.example-margin{
+    margin-top: 20px;
+    font-size:15px;
+}
+
+.hint{
+margin-top: 0;
+}
+.side-image img{
+    margin-top: 20px;
+    height: 250px;
+    width: 240px;
+}
+.side-image p{
+    font:14px poppins;
+    color: rgba(0, 0, 0, 0.658);
+}
+.bottom{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

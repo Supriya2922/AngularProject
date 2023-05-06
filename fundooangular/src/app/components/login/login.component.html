@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="header">
+        <img src="../../../assets/googlelogo.png" class="google-logo" alt="">
+        <h1>Sign in</h1>
+        <h2>Use your Fundoo account</h2>
+    </div>
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+ 
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error>Field required</mat-error>
+
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="password" formControlName="password">
+        <mat-error>Field required</mat-error>
+    </mat-form-field>
+    <a href="" routerLink="/forgetpassword">Forgot password?</a>
+
+    <div class="learn-more">
+<mat-hint>Not your computer? Use Guest mode to sign in privately</mat-hint>
+<a href="">Learn more</a>
+    </div>
+    <div class="bottom-container">
+        <a href="" routerLink="/register">Create account</a>
+        <button mat-raised-button color="primary">Next</button>
+    </div>
+</form>
+    
+</div>
+
