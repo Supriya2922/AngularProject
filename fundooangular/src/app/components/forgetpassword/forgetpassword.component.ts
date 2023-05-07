@@ -22,7 +22,15 @@ export class ForgetpasswordComponent implements OnInit {
     if(this.ForgotPasswordForm.invalid){
       return;
     }
-
+   else{
+  
+    let forgetdata={
+      "email":this.ForgotPasswordForm.value.email
+    }
+    this.user.forgetpassword(forgetdata).subscribe((response:any)=>{
+      console.log(response)
+    })
+   }
   }
 
 }

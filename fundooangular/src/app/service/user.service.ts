@@ -26,5 +26,12 @@ login(data:{}){
   }
   return this.httpservice.postMethod(this.bUrl + 'Login', data, false, headers)
 }
-
+forgetpassword(data:{}){
+  let headers = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+  return this.httpservice.postMethod(this.bUrl+'ForgetPassword',data,false,headers);
+}
 }
