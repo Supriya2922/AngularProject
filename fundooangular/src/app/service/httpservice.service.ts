@@ -6,18 +6,18 @@ import { Injectable } from '@angular/core';
 })
 export class HttpserviceService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  postMethod(url:string,payload:{},token:boolean=false,httpOptions:any){
-   return this.http.post(url,payload,token&&httpOptions)
+  postMethod(url: string, payload: {}, token: boolean = false, httpOptions: any) {
+    return this.http.post(url, payload, token && httpOptions)
   }
-  putMethod(){
-    
-  }
-  getMethod(){
+  putMethod() {
 
   }
-  deleteMethod(){
-   
+  getMethod(url: string, token: boolean, httpOptions: any) {
+    return this.http.get(url, httpOptions)
+  }
+  deleteMethod() {
+
   }
 }

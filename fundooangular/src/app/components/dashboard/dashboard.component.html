@@ -1,0 +1,32 @@
+
+
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar  class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+      <h1 class="example-app-name">Fundoo Notes App</h1>
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list class="navbar">
+           
+        <a mat-list-item routerLink="/dashboard/notes" class="nav-item">  <mat-icon class="icon" aria-hidden="false" >lightbulb_outline</mat-icon> &nbsp;&nbsp; Notes</a>
+          <a mat-list-item routerLink="" class="nav-item"> <mat-icon class="icon"  fontSet="material-icons-outlined" aria-hidden="false" >notifications_none</mat-icon> &nbsp;&nbsp;  Reminders</a>
+          <a mat-list-item routerLink="." class="nav-item"> <mat-icon class="icon"  fontSet="material-icons-outlined" aria-hidden="false" >edit</mat-icon>&nbsp;&nbsp;  Edit labels</a>
+          <a mat-list-item routerLink="/dashboard/archive" class="nav-item">  <mat-icon class="icon"  fontSet="material-icons-outlined" aria-hidden="false">archive</mat-icon>&nbsp;&nbsp;   Archive</a>
+          <a mat-list-item routerLink="/dashboard/trash" class="nav-item"> <mat-icon class="icon"  fontSet="material-icons-outlined" aria-hidden="false" >delete_outline</mat-icon> &nbsp;&nbsp; Trash</a>
+        </mat-nav-list>
+      </mat-sidenav>
+  
+      <mat-sidenav-content>
+<router-outlet></router-outlet>
+   
+    
+      </mat-sidenav-content>
+    
+    </mat-sidenav-container>
+  </div>
+  

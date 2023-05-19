@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+.icon{
+    color:#202124cc;
+    font-size: 25px;
+    
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+   
+// color: rgba(73, 72, 72, 0.74);
+}
+.icon:hover{
+    border-radius: 100%;
+    background-color: #20212415;
+}
+.icon-container{
+    width:50%;
+    gap:12px;
+    display: flex;
+   
+    
+}

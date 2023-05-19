@@ -18,20 +18,29 @@ export class UserService {
     }
     return this.httpservice.postMethod(this.bUrl + 'Register', data, false, headers)
   }
-login(data:{}){
-  let headers = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
+  login(data: {}) {
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.httpservice.postMethod(this.bUrl + 'Login', data, false, headers)
   }
-  return this.httpservice.postMethod(this.bUrl + 'Login', data, false, headers)
-}
-forgetpassword(data:{}){
-  let headers = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
+  forgetpassword(data: {}) {
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.httpservice.postMethod(this.bUrl + 'ForgetPassword', data, false, headers);
   }
-  return this.httpservice.postMethod(this.bUrl+'ForgetPassword',data,false,headers);
-}
+  resetpassword(data: {}, token: string) {
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      })
+    }
+    return this.httpservice.postMethod(this.bUrl + 'resetPassword', data, true, headers);
+  }
 }

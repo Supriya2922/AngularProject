@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+.container {
+    min-height: 28px;
+    width: 50%;
+    border: solid transparent;
+    border-width: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 30px;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.container input {
+    border: none;
+   
+    width: 90%;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus {
+    outline: none;
+}
+.icon-footer{
+    display: flex;
+}
+.icon-footer button{
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    padding: 10px 30px;
+    height: fit-content;
+  font-size: 19px;
+  font-family: 'Roboto';
+  cursor: pointer;
+  border-radius: 10px;
+}
+.icon-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.icon-footer button:hover{
+    background-color: #20212415;
+}
+::-webkit-input-placeholder {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.note::-webkit-input-placeholder {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.icon {
+    font-size: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    color: rgba(82, 80, 80, 0.74);
+}
+
+.icon:hover {
+    background-color: #20212415;
+    border-radius: 100%;
+
+}
+.undo-redo{
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    color: rgba(82, 80, 80, 0.74);
+}
+.undo-redo:hover{
+    background-color: #20212415;
+    border-radius: 100%;
+}
+.title {
+    display: flex;
+
+}
+
+.note {
+    margin-bottom: 10px;
+}
+.icons{
+    display: flex;
+    
+}

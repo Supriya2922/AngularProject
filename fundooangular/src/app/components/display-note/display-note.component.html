@@ -1,0 +1,17 @@
+
+<div class="container">
+    <mat-card class="note"  *ngFor="let note of AllNotes">
+        <!-- <div class="main">   -->
+        <div class="heading" >
+            <h1>{{note.title}}</h1> <mat-icon class="icons" fontSet="material-icons-outlined" >push_pin</mat-icon>
+        </div>
+            
+            <p>
+               {{note.description}}
+            </p>
+          
+            <app-icons class="icons"></app-icons>
+        <!-- </div> -->
+    </mat-card>
+    
+</div>

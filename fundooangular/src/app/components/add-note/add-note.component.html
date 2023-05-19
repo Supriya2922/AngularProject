@@ -1,0 +1,24 @@
+
+
+
+<div class="container">
+   <form >
+    <div class="title" *ngIf="isShow">
+        <input type="text" placeholder="Title" name="title" [(ngModel)]="title">
+        <mat-icon class="icon"  fontSet="material-icons-outlined">push_pin</mat-icon>
+    </div>
+   
+    <input type="text" class="note" *ngIf="isShow || !isShow" (click)="show()" name="desc" placeholder="Take a note..." [(ngModel)]="desc">
+    <div class="icon-footer" *ngIf="isShow">
+        <div class="icons">
+    <app-icons ></app-icons>
+   
+        <mat-icon class="undo-redo">undo</mat-icon>
+        <mat-icon class="undo-redo">redo</mat-icon>
+    </div>
+    
+    <button (click)="close()" >Close</button>
+    </div>
+
+   </form>
+</div>

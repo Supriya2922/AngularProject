@@ -1,0 +1,15 @@
+.notes-container {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.note {
+    flex: 1 0 21%;
+}
+
+.addnote {
+    display: flex;
+    justify-content: center;
+}

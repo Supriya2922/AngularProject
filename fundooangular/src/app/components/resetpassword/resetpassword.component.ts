@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-resetpassword',
@@ -9,7 +11,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class ResetpasswordComponent implements OnInit {
   resetPasswordForm!:FormGroup;
   submitted=false;
-  constructor(private formBuilder: FormBuilder) { }
+  token:any;
+  constructor(private formBuilder: FormBuilder,private activeRoute:ActivatedRoute,private user:UserService,private route:Router) { }
 
   ngOnInit(): void {
     this.resetPasswordForm=this.formBuilder.group({
@@ -17,12 +20,24 @@ export class ResetpasswordComponent implements OnInit {
       confirmpassword:['',[Validators.required, Validators.minLength(8)]]
    
     })
+    this.token = this.activeRoute.snapshot.paramMap.get('token');
+    console.log(this.token);
   }
   onSubmit(){
     this.submitted=true;
     if(this.resetPasswordForm.invalid){
       return;
     }
-    alert('Success!');
+    
+    else{
+      let resestData={
+        "newPassword": this.resetPasswordForm.value.password,
+        "confirmPassword": this.resetPasswordForm.value.confirmpassword
+      }
+      this.user.resetpassword(resestData,this.token).subscribe((response:any)=>{
+        console.log(response)
+        this.route.navigateByUrl('/login')  
+      })
+    }
   }
 }
